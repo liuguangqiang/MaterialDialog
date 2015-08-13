@@ -49,6 +49,8 @@ public class SubListLayout extends SubLayout implements AdapterView.OnItemClickL
         params.weight = 1;
         if (TextUtils.isEmpty(builder.title)) {
             params.topMargin = builder.context.getResources().getDimensionPixelSize(R.dimen.dialog_margin_small);
+        } else {
+            params.topMargin = builder.context.getResources().getDimensionPixelSize(R.dimen.dialog_default_margin_half);
         }
         root.addView(layout.getView(), params);
     }
