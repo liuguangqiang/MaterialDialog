@@ -24,12 +24,10 @@ import android.widget.AdapterView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 
-import com.liuguangqiang.materialdialog.enums.ListType;
 import com.liuguangqiang.materialdialog.list.ListItem;
 import com.liuguangqiang.materialdialog.list.SimpleListAdapter;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 /**
