@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <attr name="md_primary_color" format="color" />
+    <attr name="md_title_color" format="color" />
+    <attr name="md_message_color" format="color" />
+
+</resources>

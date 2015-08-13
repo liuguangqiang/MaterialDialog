@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="simple_list">
+        <item>连接到网络</item>
+        <item>取消保存网络</item>
+        <item>修改网络</item>
+        <item>写入NFC标签</item>
+    </string-array>
+
+</resources>

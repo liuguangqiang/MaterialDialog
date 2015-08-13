@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="dialog_window_margin">24dp</dimen>
+    <dimen name="dialog_default_margin">24dp</dimen>
+    <dimen name="dialog_default_margin_half">12dp</dimen>
+    <dimen name="dialog_margin_small">8dp</dimen>
+
+    <dimen name="height_simple_list_item">48dp</dimen>
+
+    <dimen name="font_size_title">20sp</dimen>
+    <dimen name="font_size_content">16sp</dimen>
+
+</resources>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:paddingLeft="@dimen/dialog_default_margin"
+    android:paddingRight="@dimen/dialog_default_margin">
+
+    <RadioButton
+        android:id="@+id/rb_single_choice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/dialog_margin_small"
+        android:gravity="center_vertical"
+        android:checked="false"
+        android:focusable="false"
+        android:clickable="false"
+        android:visibility="gone"
+        android:focusableInTouchMode="false"
+        android:minHeight="@dimen/height_simple_list_item" />
+
+    <CheckBox
+        android:id="@+id/cb_multi_choice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/dialog_margin_small"
+        android:checked="false"
+        android:clickable="false"
+        android:focusable="false"
+        android:gravity="center_vertical"
+        android:visibility="gone"
+        android:focusableInTouchMode="false"
+        android:minHeight="@dimen/height_simple_list_item" />
+
+    <TextView
+        android:id="@+id/tv_title"
+        style="@style/MaterialDialog.Content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="@dimen/height_simple_list_item"
+        android:singleLine="true"
+        tools:text="Test" />
+
+</LinearLayout>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="MaterialDialog" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+
+    <style name="MaterialDialog.Button">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/btn_selector</item>
+        <item name="android:gravity">center</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textColor">@color/btn_text_color_default</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="MaterialDialog.Content">
+        <item name="android:textColor">@color/content_text_color</item>
+        <item name="android:textSize">@dimen/font_size_content</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+
+</resources>
