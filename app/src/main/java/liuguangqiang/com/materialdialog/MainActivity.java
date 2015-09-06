@@ -141,15 +141,14 @@ public class MainActivity extends AppCompatActivity {
     public void input() {
         new MaterialDialog.Builder(this)
                 .setTitle("输入")
-                .setMessage("请输入你需要的内容")
                 .setInput("请输入你需要的内容", true)
-                .setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                .setNegativeButton("取消", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
 
                     }
                 })
-                .setPositiveButton("Submit", new DialogInterface.OnClickListener() {
+                .setPositiveButton("提交", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
 
