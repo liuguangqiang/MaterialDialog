@@ -24,11 +24,8 @@ import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-
-import com.liuguangqiang.materialdialog.internal.TintUtils;
 
 /**
  * Created by Eric on 15/8/9.
@@ -42,13 +39,13 @@ public class DialogCreator {
     private View window;
     private LinearLayout layoutRoot;
     private TextView tvTitle;
-    private EditText etContent;
 
     public DialogCreator(MaterialDialog.Builder builder, MaterialDialog dialog) {
         this.builder = builder;
         this.dialog = dialog;
         createRootView();
         initViews();
+        renderTypeFace();
         populateUi();
     }
 
@@ -87,14 +84,15 @@ public class DialogCreator {
             SubListLayout.into(layoutRoot, dialog, builder);
         }
 
+        if (builder.hint != null) {
+            SubInputLayout.into(layoutRoot, builder);
+        }
+
         if (!TextUtils.isEmpty(builder.positiveText) || !TextUtils.isEmpty(builder.negativeText)) {
             layoutRoot.addView(SubButtonLayout.create(dialog, builder).getView());
         }
 
         tvTitle = findById(R.id.tv_title);
-        etContent = findById(R.id.et_content);
-
-        renderTypeFace();
     }
 
     /**
@@ -115,14 +113,6 @@ public class DialogCreator {
             tvTitle.setText(builder.title);
         } else {
             tvTitle.setVisibility(View.GONE);
-        }
-
-        //input
-        if (builder.hint != null) {
-            etContent.setHint(builder.hint);
-            etContent.setVisibility(View.VISIBLE);
-            etContent.setSingleLine(builder.singleLine);
-            TintUtils.setTint(etContent, builder.primaryColor);
         }
     }
 

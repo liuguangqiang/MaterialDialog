@@ -19,13 +19,4 @@
         android:textStyle="bold"
         tools:text="Title" />
 
-    <EditText
-        android:id="@+id/et_content"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="@dimen/dialog_default_margin"
-        android:layout_marginRight="@dimen/dialog_default_margin"
-        android:textSize="@dimen/font_size_content"
-        android:visibility="gone" />
-
 </LinearLayout>

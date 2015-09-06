@@ -121,7 +121,6 @@ public class MainActivity extends AppCompatActivity {
     @OnClick(R.id.btn_simple_list_no_title)
     public void simpleListNoTitle() {
         new MaterialDialog.Builder(this)
-                .setTitle("Eric's MacBook Pro")
                 .setMultiChoiceItems(R.array.simple_list, 4, new DialogInterface.OnMultiChoiceClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which, boolean isChecked) {
