@@ -2,13 +2,12 @@
 MaterialDialog
 
 ##Screenshots
-<img src="arts/1.png" alt="screenshot" title="screenshot" width="270" height="486" />
-<img src="arts/2.png" alt="screenshot" title="screenshot" width="270" height="486" />
+<img src="arts/1.png" width="220" height="380" />
+<img src="arts/2.png" width="220" height="380" />
+<img src="arts/3.png" width="220" height="380" />
 
-<img src="arts/3.png" alt="screenshot" title="screenshot" width="270" height="486" />
-<img src="arts/4.png" alt="screenshot" title="screenshot" width="270" height="486" />
-
-<img src="arts/5.png" alt="screenshot" title="screenshot" width="270" height="486" />
+<img src="arts/4.png" width="220" height="380" />
+<img src="arts/5.png" width="220" height="380" />
 
 ##License
     Copyright 2015 Eric Liu
