@@ -1,5 +1,5 @@
 # MaterialDialog
-MaterialDialog
+A small library for building material dialog
 
 ##Screenshots
 <img src="arts/1.png" width="220" height="380" />
@@ -8,6 +8,24 @@ MaterialDialog
 
 <img src="arts/4.png" width="220" height="380" />
 <img src="arts/5.png" width="220" height="380" />
+
+##Usage
+### Gradle
+```
+dependencies {
+    compile 'com.github.liuguangqiang.materialdialog:materialdialog:0.1.0'
+}
+```
+
+### Maven
+```
+<dependency>
+  <groupId>com.github.liuguangqiang.materialdialog</groupId>
+  <artifactId>materialdialog</artifactId>
+  <version>0.1.0</version>
+  <type>aar</type>
+</dependency>
+```
 
 ##License
     Copyright 2015 Eric Liu
