@@ -16,7 +16,6 @@
 
 package liuguangqiang.com.materialdialog;
 
-import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -39,8 +38,8 @@ public class MainActivity extends AppCompatActivity {
     @OnClick(R.id.btn_basic)
     public void basic() {
         new MaterialDialog.Builder(this)
-                .setTitle("你好吗？")
-                .setMessage("Go fuck yourself!")
+                .setTitle("Basic Dialog")
+                .setMessage("This is a basic dialog!")
                 .setNegativeButton("Negative", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
@@ -59,35 +58,22 @@ public class MainActivity extends AppCompatActivity {
 
     @OnClick(R.id.btn_basic_no_title)
     public void basicNoTitle() {
-//        new MaterialDialog.Builder(this)
-//                .setMessage("This app wants to access your location.")
-//                .setPositiveButton("Positive")
-//                .setNegativeButton("Negative")
-//                .build()
-//                .show();
-
-        AlertDialog alertDialog = new AlertDialog.Builder(this)
-                .setTitle("TestTitle")
-                .setPositiveButton("Positive", new DialogInterface.OnClickListener() {
+        new MaterialDialog.Builder(this)
+                .setMessage("This app wants to access your location.")
+                .setPositiveButton("Allow", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
 
                     }
                 })
-                .setNegativeButton("Negative", new DialogInterface.OnClickListener() {
+                .setNegativeButton("Refuse", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                    }
-                })
-//                .setSingleChoiceItems()
-                .setMultiChoiceItems(new String[]{"1", "2", "3"}, new boolean[]{true, false, true}, new DialogInterface.OnMultiChoiceClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which, boolean isChecked) {
 
                     }
                 })
-                .create();
-        alertDialog.show();
+                .build()
+                .show();
     }
 
     int checkItem = 0;
@@ -140,15 +126,15 @@ public class MainActivity extends AppCompatActivity {
     @OnClick(R.id.btn_input)
     public void input() {
         new MaterialDialog.Builder(this)
-                .setTitle("输入")
-                .setInput("请输入你需要的内容", true)
-                .setNegativeButton("取消", new DialogInterface.OnClickListener() {
+                .setTitle("Simple Input")
+                .setInput("Please input your message", true)
+                .setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
 
                     }
                 })
-                .setPositiveButton("提交", new DialogInterface.OnClickListener() {
+                .setPositiveButton("Submit", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
 

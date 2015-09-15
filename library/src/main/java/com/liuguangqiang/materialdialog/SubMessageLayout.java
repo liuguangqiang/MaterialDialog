@@ -30,12 +30,14 @@ import android.widget.TextView;
 public class SubMessageLayout extends SubLayout {
 
     private TextView tvMessage;
-    private ScrollView scrollViewMessage;
 
     public static void into(LinearLayout root, MaterialDialog.Builder builder) {
         SubMessageLayout layout = new SubMessageLayout(builder, R.layout.sub_message);
         LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, 0);
         params.weight = 1;
+        if (TextUtils.isEmpty(builder.title)) {
+            params.topMargin = builder.context.getResources().getDimensionPixelSize(R.dimen.dialog_margin_small);
+        }
         root.addView(layout.getView(), params);
     }
 
@@ -47,7 +49,6 @@ public class SubMessageLayout extends SubLayout {
     public void initViews(View view) {
         tvMessage = findById(R.id.tv_message);
         tvMessage.setText(builder.message);
-        scrollViewMessage = findById(R.id.scrollview_message);
 
         if (builder.messageColor != 0) {
             tvMessage.setTextColor(builder.messageColor);
@@ -55,11 +56,6 @@ public class SubMessageLayout extends SubLayout {
 
         if (builder.contentFont != null) {
             tvMessage.setTypeface(builder.contentFont);
-        }
-
-        if (TextUtils.isEmpty(builder.title)) {
-            LinearLayout.LayoutParams params = (LinearLayout.LayoutParams) scrollViewMessage.getLayoutParams();
-            params.topMargin = builder.context.getResources().getDimensionPixelSize(R.dimen.dialog_margin_small);
         }
     }
 
