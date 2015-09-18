@@ -28,6 +28,12 @@
         android:text="Simple List" />
 
     <Button
+        android:id="@+id/btn_single_choice_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="SingleChoice List" />
+
+    <Button
         android:id="@+id/btn_simple_list_no_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

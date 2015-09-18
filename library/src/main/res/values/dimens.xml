@@ -5,6 +5,7 @@
     <dimen name="dialog_default_margin">24dp</dimen>
     <dimen name="dialog_default_margin_half">12dp</dimen>
     <dimen name="dialog_margin_small">8dp</dimen>
+    <dimen name="dialog_margin_least">4dp</dimen>
 
     <dimen name="height_simple_list_item">48dp</dimen>
 

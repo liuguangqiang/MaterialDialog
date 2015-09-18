@@ -78,8 +78,8 @@ public class MainActivity extends AppCompatActivity {
 
     int checkItem = 0;
 
-    @OnClick(R.id.btn_simple_list)
-    public void simpleList() {
+    @OnClick(R.id.btn_single_choice_list)
+    public void singleChoiceList() {
         new MaterialDialog.Builder(this)
                 .setTitle("Eric's MacBook Pro")
                 .setSingleChoiceItems(R.array.simple_list, checkItem, new DialogInterface.OnClickListener() {
@@ -91,13 +91,27 @@ public class MainActivity extends AppCompatActivity {
                 .setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        Toast.makeText(getApplicationContext(), "on checked" + checkItem, Toast.LENGTH_SHORT).show();
+
                     }
                 })
                 .setPositiveButton("Submit", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
 
+                    }
+                })
+                .build()
+                .show();
+    }
+
+    @OnClick(R.id.btn_simple_list)
+    public void simpleList() {
+        new MaterialDialog.Builder(this)
+                .setTitle("Eric's MacBook Pro")
+                .setItems(R.array.simple_list, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int which) {
+                        Toast.makeText(getApplicationContext(), "on click" + which, Toast.LENGTH_SHORT).show();
                     }
                 })
                 .build()
