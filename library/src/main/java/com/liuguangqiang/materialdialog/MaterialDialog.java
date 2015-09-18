@@ -55,6 +55,7 @@ public class MaterialDialog extends BaseDialog {
         protected String[] items;
 
         //SingleChoice
+        protected OnClickListener onItemClickListener;
         protected OnClickListener onSingleChoiceClickListener;
         protected OnMultiChoiceClickListener onMultiChoiceClickListener;
         protected int checkedItem = 0;
@@ -126,14 +127,15 @@ public class MaterialDialog extends BaseDialog {
             return this;
         }
 
-        public Builder items(String[] items) {
-            this.listType = ListType.NORMAL;
-            this.items = items;
-            return this;
+        public Builder setItems(@ArrayRes int resId, OnClickListener onItemClickListener) {
+            return setItems(context.getResources().getStringArray(resId), onItemClickListener);
         }
 
-        public Builder items(@ArrayRes int resId) {
-            return items(context.getResources().getStringArray(resId));
+        public Builder setItems(String[] items, OnClickListener onItemClickListener) {
+            this.listType = ListType.NORMAL;
+            this.items = items;
+            this.onItemClickListener = onItemClickListener;
+            return this;
         }
 
         public Builder setSingleChoiceItems(@ArrayRes int resId, int checkedItem, OnClickListener onSingleChoiceClickListener) {

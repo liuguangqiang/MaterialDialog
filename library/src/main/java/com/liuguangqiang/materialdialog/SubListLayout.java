@@ -48,7 +48,7 @@ public class SubListLayout extends SubLayout implements AdapterView.OnItemClickL
         if (TextUtils.isEmpty(builder.title)) {
             params.topMargin = builder.context.getResources().getDimensionPixelSize(R.dimen.dialog_margin_small);
         } else {
-            params.topMargin = builder.context.getResources().getDimensionPixelSize(R.dimen.dialog_default_margin_half);
+            params.topMargin = builder.context.getResources().getDimensionPixelSize(R.dimen.dialog_margin_least);
         }
         root.addView(layout.getView(), params);
     }
@@ -89,7 +89,7 @@ public class SubListLayout extends SubLayout implements AdapterView.OnItemClickL
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
         switch (builder.listType) {
             case NORMAL:
-                dialog.dismiss();
+                itemClick(position);
                 break;
             case SINGLE_CHOICE:
                 singleChoice(position);
@@ -103,6 +103,13 @@ public class SubListLayout extends SubLayout implements AdapterView.OnItemClickL
     public void clearChoice() {
         for (ListItem item : list) {
             item.checked = false;
+        }
+    }
+
+    private void itemClick(int position) {
+        dialog.dismiss();
+        if (builder.onItemClickListener != null) {
+            builder.onItemClickListener.onClick(dialog, position);
         }
     }
 

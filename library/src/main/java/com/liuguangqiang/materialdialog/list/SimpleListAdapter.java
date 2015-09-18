@@ -61,13 +61,14 @@ public class SimpleListAdapter extends BaseAdapter<ListItem> {
 
         ListItem item = data.get(position);
         viewholder.tvTitle.setText(item.title);
-        if (listType == ListType.SINGLE_CHOICE) {
+        if (listType == ListType.NORMAL) {
+            viewholder.radioButton.setVisibility(View.GONE);
+            viewholder.checkBox.setVisibility(View.GONE);
+        } else if (listType == ListType.SINGLE_CHOICE) {
             viewholder.radioButton.setVisibility(View.VISIBLE);
             viewholder.radioButton.setChecked(item.checked);
             TintUtils.setTint(viewholder.radioButton, primaryColor);
-        }
-
-        if (listType == ListType.MULTI_CHOICE) {
+        } else if (listType == ListType.MULTI_CHOICE) {
             viewholder.checkBox.setVisibility(View.VISIBLE);
             viewholder.checkBox.setChecked(item.checked);
             TintUtils.setTint(viewholder.checkBox, primaryColor);
