@@ -50,6 +50,8 @@ public class MaterialDialog extends BaseDialog {
         protected int primaryColor = 0;
         protected int titleColor = 0;
         protected int messageColor = 0;
+        protected int backgroundColor = 0;
+        protected boolean isProgressDialog = false;
 
         protected ListType listType = ListType.NORMAL;
         protected String[] items;
@@ -102,6 +104,16 @@ public class MaterialDialog extends BaseDialog {
 
         public Builder setMessage(String message) {
             this.message = message;
+            return this;
+        }
+
+        public Builder setMessage(@StringRes int resId) {
+            this.message = context.getString(resId);
+            return this;
+        }
+
+        public Builder isProgressDialog(boolean isProgressDialog) {
+            this.isProgressDialog = isProgressDialog;
             return this;
         }
 
@@ -164,6 +176,26 @@ public class MaterialDialog extends BaseDialog {
         public Builder setInput(String hint, boolean singleLine) {
             this.hint = hint;
             this.singleLine = singleLine;
+            return this;
+        }
+
+        public Builder setPrimaryColor(int color) {
+            this.primaryColor = color;
+            return this;
+        }
+
+        public Builder setTitleColor(int color) {
+            this.titleColor = color;
+            return this;
+        }
+
+        public Builder setMessageColor(int color) {
+            this.messageColor = color;
+            return this;
+        }
+
+        public Builder setBackgroundColor(int color) {
+            this.backgroundColor = color;
             return this;
         }
 

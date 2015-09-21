@@ -69,7 +69,11 @@ public class DialogCreator {
         GradientDrawable gradientDrawable = new GradientDrawable();
         gradientDrawable.setSize(dialogWidth, 10);
         gradientDrawable.setCornerRadius(5);
-        gradientDrawable.setColor(Color.WHITE);
+        if (builder.backgroundColor == 0) {
+            gradientDrawable.setColor(Color.WHITE);
+        } else {
+            gradientDrawable.setColor(builder.backgroundColor);
+        }
         return gradientDrawable;
     }
 
@@ -79,7 +83,10 @@ public class DialogCreator {
 
     private void initViews() {
         if (!TextUtils.isEmpty(builder.message)) {
-            SubMessageLayout.into(layoutRoot, builder);
+            if (builder.isProgressDialog)
+                SubProgressLayout.into(layoutRoot, builder);
+            else
+                SubMessageLayout.into(layoutRoot, builder);
         } else if (builder.items != null) {
             SubListLayout.into(layoutRoot, dialog, builder);
         }

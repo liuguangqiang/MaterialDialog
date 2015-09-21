@@ -17,6 +17,7 @@
 package liuguangqiang.com.materialdialog;
 
 import android.content.DialogInterface;
+import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.Toast;
@@ -154,6 +155,36 @@ public class MainActivity extends AppCompatActivity {
 
                     }
                 })
+                .build()
+                .show();
+    }
+
+    @OnClick(R.id.btn_progress_dialog)
+    public void progressDialog() {
+        new MaterialDialog.Builder(this)
+                .setTitle("Progress Dialog")
+                .setMessage("Please wait...")
+                .isProgressDialog(true)
+                .build()
+                .show();
+    }
+
+    @OnClick(R.id.btn_progress_dialog_no_title)
+    public void progressDialogNoTitle() {
+        new MaterialDialog.Builder(this)
+                .setMessage("Please wait...")
+                .isProgressDialog(true)
+                .build()
+                .show();
+    }
+
+    @OnClick(R.id.btn_progress_dialog_black)
+    public void progressDialogBlack() {
+        new MaterialDialog.Builder(this)
+                .setMessage("Please wait...")
+                .isProgressDialog(true)
+                .setBackgroundColor(getResources().getColor(R.color.black_background))
+                .setMessageColor(Color.WHITE)
                 .build()
                 .show();
     }

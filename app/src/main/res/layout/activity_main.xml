@@ -45,4 +45,22 @@
         android:layout_height="wrap_content"
         android:text="Input" />
 
+    <Button
+        android:id="@+id/btn_progress_dialog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Progress Dialog" />
+
+    <Button
+        android:id="@+id/btn_progress_dialog_no_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Progress Dialog No Title" />
+
+    <Button
+        android:id="@+id/btn_progress_dialog_black"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Progress Dialog Black" />
+
 </LinearLayout>
