@@ -13,7 +13,7 @@ A small library for building material dialog
 ### Gradle
 ```
 dependencies {
-    compile 'com.github.liuguangqiang.materialdialog:materialdialog:0.1.1'
+    compile 'com.github.liuguangqiang.materialdialog:materialdialog:0.1.5'
 }
 ```
 

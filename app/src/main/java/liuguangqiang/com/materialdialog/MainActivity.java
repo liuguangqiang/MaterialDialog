@@ -53,6 +53,7 @@ public class MainActivity extends AppCompatActivity {
 
                     }
                 })
+                .cancelable(false)
                 .build()
                 .show();
     }
@@ -73,6 +74,7 @@ public class MainActivity extends AppCompatActivity {
 
                     }
                 })
+                .cancelable(true)
                 .build()
                 .show();
     }
