@@ -50,6 +50,7 @@ public class DialogCreator {
     }
 
     public void createRootView() {
+        this.dialog.setCancelable(builder.cancelable);
         int width = DisplayUtils.getScreenWidth(builder.context);
         int margin = builder.context.getResources().getDimensionPixelSize(R.dimen.dialog_window_margin);
         dialogWidth = width - margin * 2;

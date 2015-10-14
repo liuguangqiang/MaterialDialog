@@ -45,7 +45,7 @@ public class MaterialDialog extends BaseDialog {
         protected String positiveText;
         protected String negativeText;
         protected String hint;
-        protected boolean cancelable;
+        protected boolean cancelable = true;
         protected boolean singleLine;
         protected int primaryColor = 0;
         protected int titleColor = 0;
@@ -117,20 +117,23 @@ public class MaterialDialog extends BaseDialog {
             return this;
         }
 
-        public Builder setContent(@StringRes int resId) {
-            this.title = context.getString(resId);
-            return this;
-        }
-
         public Builder setNeutralButton(String neutralText) {
             this.neutralText = neutralText;
             return this;
+        }
+
+        public Builder setNegativeButton(@StringRes int resId, OnClickListener listener) {
+            return setNegativeButton(context.getString(resId), listener);
         }
 
         public Builder setNegativeButton(String negativeText, OnClickListener listener) {
             this.negativeText = negativeText;
             this.negativeClickListener = listener;
             return this;
+        }
+
+        public Builder setPositiveButton(@StringRes int resId, OnClickListener listener) {
+            return setPositiveButton(context.getString(resId), listener);
         }
 
         public Builder setPositiveButton(String positiveText, OnClickListener listener) {
